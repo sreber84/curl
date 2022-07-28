@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo curl -k ${CURLHOST:=kubernetes.default.svc/version} every ${TIMEOUT:=2} sec
+echo curl -k ${CURLHOST:=https://kubernetes.default.svc/version} every ${TIMEOUT:=2} sec
 
 while true; do curl -k ${CURLHOST}; sleep ${TIMEOUT}; done;
