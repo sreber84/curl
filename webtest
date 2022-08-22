@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo curl -k ${CURLHOST:=https://kubernetes.default.svc/version} every ${TIMEOUT:=2} sec
+echo curl -k ${CURLHOST:=https://kubernetes.default.svc/version} every ${TIMEOUT:=1} sec
 
 while true; do echo "`date` - `curl -k -s -o /dev/null -w "%{http_code} - %{time_appconnect} - %{time_connect} - %{time_namelookup} -- %{time_total} = %{exitcode} -- %{url}" ${CURLHOST}`"; sleep ${TIMEOUT}; done;
