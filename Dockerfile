@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:fedora-36
+FROM registry.fedoraproject.org/fedora:36
 
 COPY webtest /
     
